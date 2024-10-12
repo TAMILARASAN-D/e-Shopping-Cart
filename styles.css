@@ -1,0 +1,142 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+#products {
+    display: flex;
+    flex-direction: column; /* Arrange boxes vertically */
+    align-items: center; /* Center align boxes */
+}
+
+.product-box {
+    background-color: #fff;
+    border: 2px solid #bab4b4;
+    border-radius: 8px;
+    padding: 20px; /* Increased padding for better spacing */
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    position: relative; /* For positioning radio button */
+}
+
+.product-box.selected {
+    border-color: #dd3838;
+    transform: scale(1.05);
+}
+
+/* Add style for the "MOST POPULAR" ribbon */
+.popular-tag {
+    position: absolute;
+    top: -8px;
+    right: -20px;
+    background-color: #dd3838;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transform: rotate(10deg); /* Slight rotation for effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-box input[type="radio"] {
+    position: absolute; /* Position the radio button */
+    top: 10px; /* Adjust positioning */
+    left: 10px; /* Adjust positioning */
+}
+
+.product-info {
+    position:sticky; /* Position the price info in the top right corner */
+    top: 10px;
+    left: 10px;
+    text-align: left; /* Align text to the right */
+}
+
+.units-discount {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: row; /* Stack units and discount horizontally */
+    align-items: flex-start; /* Align items to the left */
+    margin-left: 40px; /* Space to the left of the radio button */
+}
+
+.price-info {
+    position: absolute; /* Position the price info in the top right corner */
+    top: 10px;
+    right: 10px;
+    text-align: right; /* Align text to the right */
+}
+
+.discount {
+    background-color: #dd3838; /* Highlight the discount with background color */
+    color: white; /* Change text color to white for better contrast */
+    padding: 2px 5px; /* Add some padding for better appearance */
+    border-radius: 3px; /* Slightly round the corners */
+    display: inline-block; /* Ensures the background color wraps around the text */
+}
+
+.dropdowns {
+    margin-top: 10px;
+    display: none;
+}
+
+label {
+    font-weight:lighter;
+}
+
+p {
+    margin: 5px 0;
+}
+
+select {
+    margin-left: 10px;
+}
+
+button {
+    padding: 10px 0; /* Match the height with the box */
+    background-color: #dd3838;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+    width: 330px; /* Full width to match the box */
+}
+
+button:hover {
+    background-color: #f77373;
+    color: black;
+}
+
+#total {
+    font-size: 18px;
+    margin-top: 20px;
+}
+#delivery {
+    font-size: 15px;
+    color: #dd3838;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    .product-box {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+}
